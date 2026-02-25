@@ -25,7 +25,11 @@ const Featured = () => {
                 </a>
               </div>
               <div className="book__ratings">
-                 <FontAwesomeIcon icon="star" />
+                <FontAwesomeIcon icon="star" />
+                <FontAwesomeIcon icon="star" />
+                <FontAwesomeIcon icon="star" />
+                <FontAwesomeIcon icon="star" />
+                <FontAwesomeIcon icon="star" />
               </div>
             </div>
           </div>
@@ -36,4 +40,3 @@ const Featured = () => {
 };
 
 export default Featured;
- 
