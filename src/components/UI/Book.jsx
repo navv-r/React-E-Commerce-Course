@@ -15,18 +15,25 @@ const Book = ({ book }) => {
         </a>
       </div>
       <div className="book__ratings">
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star-half-alt" />
+        {
+          new Array(4)
+        }
       </div>
       <div className="book__price">
-        <span className="book__price--normal">${book.originalPrice}</span>
-        <span className="book__price--sale">${book.salePrice}</span>
+        {book.salePrice ? (
+          <>
+            <span className="book__price--normal">
+              ${book.originalPrice.toFixed(2)}
+            </span>
+            ${book.salePrice.toFixed(2)}
+          </>
+        ) : (
+          <>${book.originalPrice.toFixed(2)}</>
+        )}
       </div>
     </div>
   );
 };
 
 export default Book;
+   
