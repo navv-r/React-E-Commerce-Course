@@ -1,10 +1,10 @@
-import React from "react";
-import { books } from "../data";
+import React, { useState } from "react";
 import Book from "../components/UI/Book";
 
-const Books = () => {
+const Books = ({ books: initialBooks }) => {
+  const [books, setBooks] = useState(initialBooks);
   return (
-    <div id="books__body"> 
+    <div id="books__body">  
       <main id="books__main">
         <section>
           <div className="books__container">
@@ -23,10 +23,10 @@ const Books = () => {
                 </select>
               </div>
               <div className="books">
-                {books.map((book) => (
+                {books.map((book) => ( 
                   <Book book={book} key={book.id} />
                 ))}
-              </div>
+              </div> 
             </div>
           </div>
         </section>
